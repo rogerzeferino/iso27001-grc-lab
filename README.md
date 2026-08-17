@@ -1,5 +1,7 @@
 # CISO Assistant, deploy e modelagem de SGSI
 
+![Progresso do audit por framework](Compliance.png)
+
 Plataforma de GRC open source implantada em laboratório, com SGSI modelado sobre a ISO/IEC 27001:2022.
 
 Cada requisito da norma ligado a uma prática implementada e a uma evidência verificável.
@@ -26,6 +28,8 @@ VM com 6 vCPU, 12 GB de RAM e 120 GB de disco.
 | `caddy` | Proxy reverso, TLS | 8443 |
 | `huey` | Fila assíncrona | — |
 | `qdrant` | Base vetorial | 6333 |
+
+![Visão geral do ambiente](Summary.png)
 
 ---
 
@@ -198,6 +202,8 @@ Domínio                      segrega permissão e dados
                     └── Evidence          prova de operação
 ```
 
+![Objetos do SGSI instanciados](Governance.png)
+
 Applied control e requisito têm relação de **muitos para muitos**. Uma prática atende vários requisitos, o que elimina duplicação de registro.
 
 ISO 27001:2022 e NIST CSF v2.0 vêm carregados por padrão. A plataforma projeta a avaliação de um framework sobre o outro automaticamente.
@@ -232,6 +238,8 @@ ISO 27001:2022 e NIST CSF v2.0 vêm carregados por padrão. A plataforma projeta
 |---|---|
 | Controls coverage | Requisitos com applied control vinculado |
 | Evidence coverage | Requisitos com evidência anexada |
+
+![Cobertura de controle e evidência](Assignments.png)
 
 Requisito conforme sem nenhum dos dois é conformidade declarada sem lastro.
 
